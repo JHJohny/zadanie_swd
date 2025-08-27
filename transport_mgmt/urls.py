@@ -1,6 +1,13 @@
 from django.urls import path, include
-from transport.views import healthcheck
+from rest_framework.routers import DefaultRouter
+
+from transport.views import VehicleViewSet, DriverViewSet, OrderViewSet
+
+router = DefaultRouter()
+router.register(r"vehicles", VehicleViewSet)
+router.register(r"drivers", DriverViewSet)
+router.register(r"orders", OrderViewSet)
 
 urlpatterns = [
-    path("api/healthcheck/", healthcheck),
+    path("api/", include(router.urls)),
 ]
