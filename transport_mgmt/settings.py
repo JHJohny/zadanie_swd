@@ -59,5 +59,5 @@ REST_FRAMEWORK = {
 SPECTACULAR_SETTINGS = {
     "TITLE": "Transport Management API",
     "DESCRIPTION": "Django REST API for orders, vehicles, drivers...",
-    "VERSION": "0.0.1",
+    "VERSION": "1.0.0",
 }
